@@ -8,7 +8,7 @@
 ![Platform](https://img.shields.io/badge/平台-抖音%20%2F%20小红书-orange)
 ![Type](https://img.shields.io/badge/类型-WorkBuddy%20Skill-blue)
 
-制作人：kk2056
+制作人：黎木生AI
 
 </div>
 
