@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一周选题生成器 · Skill 介绍</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f7f7f5;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px 80px; }
+
+  /* Hero */
+  .hero { padding: 72px 0 48px; border-bottom: 1px solid #e5e5e0; }
+  .tag {
+    display:inline-block; font-size:12px; letter-spacing:.08em; color:#c2410c;
+    background:#fff2ea; border:1px solid #ffd9c2; padding:5px 12px; border-radius:99px; margin-bottom:20px;
+  }
+  h1 { font-size: 44px; font-weight: 800; letter-spacing:-.02em; line-height:1.2; }
+  .sub { font-size:19px; color:#555; margin-top:14px; font-weight:400; }
+  .byline { font-size:13px; color:#999; margin-top:24px; }
+
+  /* flow strip */
+  .flow {
+    display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+    background:#fff; border:1px solid #e8e8e2; border-radius:14px;
+    padding:20px 24px; margin-top:32px;
+  }
+  .flow span { font-size:15px; font-weight:600; color:#1a1a1a; }
+  .flow i { color:#c2410c; font-style:normal; font-size:16px; }
+
+  /* sections */
+  section { padding-top: 56px; }
+  h2 {
+    font-size:13px; letter-spacing:.12em; color:#c2410c; font-weight:700;
+    text-transform:uppercase; margin-bottom:8px;
+  }
+  h3 { font-size:26px; font-weight:700; margin-bottom:20px; letter-spacing:-.01em; }
+  p.lead { font-size:16px; color:#444; margin-bottom:24px; }
+
+  /* cards */
+  .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .card {
+    background:#fff; border:1px solid #e8e8e2; border-radius:14px; padding:22px;
+  }
+  .card .num { font-size:12px; font-weight:700; color:#c2410c; letter-spacing:.1em; }
+  .card .t { font-size:17px; font-weight:700; margin:8px 0 8px; }
+  .card .d { font-size:14px; color:#666; line-height:1.65; }
+
+  /* table */
+  table { width:100%; border-collapse:collapse; background:#fff; border:1px solid #e8e8e2; border-radius:12px; overflow:hidden; font-size:14px; }
+  th { background:#faf9f7; text-align:left; padding:13px 16px; font-weight:700; font-size:13px; color:#555; border-bottom:1px solid #ececE6; }
+  td { padding:13px 16px; border-bottom:1px solid #f2f2ee; vertical-align:top; }
+  tr:last-child td { border-bottom:none; }
+  .yes { color:#15803d; font-weight:600; }
+  .no { color:#b91c1c; font-weight:600; }
+  .dim { color:#888; }
+
+  /* steps */
+  .steps { counter-reset:s; }
+  .step {
+    display:flex; gap:16px; padding:18px 0; border-bottom:1px solid #ececE6;
+  }
+  .step:last-child { border-bottom:none; }
+  .step .n {
+    flex:0 0 28px; height:28px; border-radius:50%; background:#c2410c; color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700;
+  }
+  .step .c { flex:1; }
+  .step .ct { font-weight:700; font-size:16px; margin-bottom:4px; }
+  .step .cd { font-size:14px; color:#666; }
+
+  /* callout */
+  .callout {
+    background:#fff; border:1px solid #e8e8e2; border-left:3px solid #c2410c;
+    border-radius:10px; padding:16px 20px; font-size:15px; margin-top:20px;
+  }
+  .callout b { color:#c2410c; }
+
+  /* rules */
+  .rules { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+  .rule { background:#fff; border:1px solid #e8e8e2; border-radius:10px; padding:14px 18px; font-size:14px; }
+  .rule .k { font-weight:700; }
+
+  /* footer */
+  .foot {
+    margin-top:56px; padding-top:28px; border-top:1px solid #e5e5e0;
+    font-size:13px; color:#999; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+  .foot a { color:#c2410c; text-decoration:none; }
+
+  @media (max-width: 720px) {
+    h1 { font-size:32px; }
+    .cards, .rules { grid-template-columns:1fr; }
+    .wrap { padding:0 18px 56px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="tag">WORKBUDDY SKILL</div>
+    <h1>一周选题生成器</h1>
+    <div class="sub">上传历史爆款，AI 拆出你的爆款规律，批量产出下周选题</div>
+    <div class="flow">
+      <span>3-5 篇历史爆款</span><i>→</i>
+      <span>拆结构</span><i>→</i>
+      <span>抽规律</span><i>→</i>
+      <span>15-20 个选题</span>
+    </div>
+    <div class="byline">制作人 kk2056 · 抖音 / 小红书双平台</div>
+  </div>
+
+  <section>
+    <h2>Why</h2>
+    <h3>选题枯竭，不是没灵感</h3>
+    <p class="lead">
+      真正的根因是：你从没把自己账号的爆款规律拆出来过。所以每次都从零开始想，
+      想出来的还没上次的好使。
+    </p>
+    <div class="callout">
+      这个 skill 干一件事：<b>从你自己的历史爆款里抽规律，再按规律量产选题。</b>
+      每条选题都挂着一条你数据里的规律，不是通用模板硬套。
+    </div>
+  </section>
+
+  <section>
+    <h2>What you get</h2>
+    <h3>跑一次，拿到三样东西</h3>
+    <div class="cards">
+      <div class="card">
+        <div class="num">01</div>
+        <div class="t">逐篇拆解表</div>
+        <div class="d">选题角度 / 开头钩子 / 行文结构 / 标题特征，四个维度拆明白你过去的爆款到底赢在哪</div>
+      </div>
+      <div class="card">
+        <div class="num">02</div>
+        <div class="t">三条共性规律</div>
+        <div class="d">你账号专属的爆款模式——开头怎么钩、标题怎么起、结构怎么铺。不是通用鸡汤</div>
+      </div>
+      <div class="card">
+        <div class="num">03</div>
+        <div class="t">15-20 个选题</div>
+        <div class="d">抖音 / 小红书分开设计，每条带选题角度、建议标题、开头钩子、内容形式、推荐等级</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Compare</h2>
+    <h3>有它 vs 没它</h3>
+    <table>
+      <thead><tr><th style="width:22%"></th><th>没这个 skill</th><th>有这个 skill</th></tr></thead>
+      <tbody>
+        <tr><td><b>选题从哪来</b></td><td class="dim">刷同行、抄爆款、等灵感</td><td>从你自己账号的数据规律推</td></tr>
+        <tr><td><b>一周出几个</b></td><td class="dim">蹲半天憋 3 个</td><td>一次 <b>15-20 个</b></td></tr>
+        <tr><td><b>为什么能爆</b></td><td class="dim">说不清，靠感觉</td><td>每条挂着一条你的爆款规律</td></tr>
+        <tr><td><b>平台差异</b></td><td class="dim">一个选题两头硬发</td><td>抖音 / 小红书分开设计</td></tr>
+        <tr><td><b>废选题</b></td><td class="dim">混在里面，拍完才发现</td><td>生成时就剔除</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>How</h2>
+    <h3>四步走完</h3>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div class="c">
+        <div class="ct">准备 3-5 篇历史爆款</div>
+        <div class="cd">markdown / txt / docx 都行。每篇至少要有标题 + 开头 3 秒 + 整体结构，只有标题不够</div>
+      </div></div>
+      <div class="step"><div class="n">2</div><div class="c">
+        <div class="ct">新建会话，上传素材</div>
+        <div class="cd">在 WorkBuddy 里开一个新会话，把内容丢进去</div>
+      </div></div>
+      <div class="step"><div class="n">3</div><div class="c">
+        <div class="ct">说清定位和平台</div>
+        <div class="cd">告诉 AI 你的账号定位是谁、目标平台是抖音、小红书，还是都要</div>
+      </div></div>
+      <div class="step"><div class="n">4</div><div class="c">
+        <div class="ct">拿结果</div>
+        <div class="cd">拆解表 → 共性规律 → 选题清单，一次拿全</div>
+      </div></div>
+    </div>
+    <div class="callout"><b>硬门槛：</b>不足 3 篇，AI 会停下来让你补素材，绝不硬凑。</div>
+  </section>
+
+  <section>
+    <h2>Output</h2>
+    <h3>你会拿到这样的表</h3>
+    <table>
+      <thead><tr><th>平台</th><th>选题角度</th><th>建议标题</th><th>开头钩子</th><th>内容形式</th><th>推荐</th></tr></thead>
+      <tbody>
+        <tr><td>抖音</td><td>解决"提示词写了没用"</td><td>你写的提示词没用，是因为少了这一句</td><td>反常识</td><td>口播+演示</td><td class="yes">✅</td></tr>
+        <tr><td>抖音</td><td>解决"AI文案一眼假"</td><td>AI写的文案一眼假，问题出在开头这3句</td><td>痛点</td><td>口播+对比</td><td class="yes">✅</td></tr>
+        <tr><td>抖音</td><td>解决"做图还要找设计"</td><td>主图、封面、配图，一个提示词全搞定</td><td>结果承诺</td><td>口播+演示</td><td class="yes">✅</td></tr>
+        <tr><td>小红书</td><td>解决"AI味太重"</td><td>一眼AI写的文案，都有这3个毛病</td><td>痛点</td><td>图文清单</td><td class="yes">✅</td></tr>
+        <tr><td>小红书</td><td>解决"提示词存不住"</td><td>我把常用的AI提示词整理成了这一张表</td><td>利益点</td><td>图文+表格</td><td class="yes">✅</td></tr>
+        <tr><td>小红书</td><td>解决"不敢用AI"</td><td>用AI不算作弊，重复劳动才算</td><td>反常识</td><td>图文</td><td class="yes">✅</td></tr>
+      </tbody>
+    </table>
+    <div class="callout">完整 18 条 + 拆解表 + 共性规律，见仓库里的 <b>examples/output_example.md</b></div>
+  </section>
+
+  <section>
+    <h2>Rules</h2>
+    <h3>四条不破的底线</h3>
+    <div class="rules">
+      <div class="rule"><span class="k">不编造</span> 数据或案例。素材里没有的，不瞎补</div>
+      <div class="rule"><span class="k">不输出</span> 与爆款规律无关的选题</div>
+      <div class="rule"><span class="k">不输出</span> 纯品牌宣传 / 硬广选题</div>
+      <div class="rule"><span class="k">不足 3 篇</span> 不硬生成，先提醒补素材</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Install</h2>
+    <h3>装好就能用</h3>
+    <div class="callout">
+      丢进 <b>~/.workbuddy/skills/one-week-topic-generator/</b><br>
+      然后直接说「帮我找选题」「一周选题」「没选题了」，自动触发。
+    </div>
+  </section>
+
+  <div class="foot">
+    <div>一周选题生成器 · 制作人 kk2056 · MIT License</div>
+    <div><a href="https://github.com/kk2056/one-week-topic-generator">github.com/kk2056/one-week-topic-generator</a></div>
+  </div>
+
+</div>
+</body>
+</html>
